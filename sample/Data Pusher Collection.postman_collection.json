@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "45fd05e1-9078-4dd5-8e29-998832c4aa20",
+		"name": "Data Pusher Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27493969"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\": \"testuser2@gmail.com\",\r\n    \"accountName\": \"Test User Two\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\": \"testuser1@gmail.com\",\r\n    \"accountName\": \"Test User One\",\r\n    \"website\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/accounts/2837a617-60a7-4c16-98cc-7fcd9a95c6a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"accounts",
+								"2837a617-60a7-4c16-98cc-7fcd9a95c6a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\": \"testuser1@gmail.com\",\r\n    \"accountName\": \"User One Prime\",\r\n    \"appSecretToken\": \"4789\",\r\n    \"accountId\": \"852012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/accounts/2837a617-60a7-4c16-98cc-7fcd9a95c6a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"accounts",
+								"2837a617-60a7-4c16-98cc-7fcd9a95c6a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\": \"testuser1@gmail.com\",\r\n    \"accountName\": \"User One Prime\",\r\n    \"appSecretToken\": \"4789\",\r\n    \"accountId\": \"852012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/accounts/74a110f5-d1ce-4878-a026-bb459f7e4ca8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"accounts",
+								"74a110f5-d1ce-4878-a026-bb459f7e4ca8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destinations",
+			"item": [
+				{
+					"name": "Create Destination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountId\": \"2837a617-60a7-4c16-98cc-7fcd9a95c6a8\",\r\n  \"url\": \"https://jsonplaceholder.typicode.com/posts/2\",\r\n  \"httpMethod\": \"patch\",\r\n  \"headers\": {\r\n    \"APP_ID\": \"1234APPID1234\",\r\n    \"APP_SECRET\": \"123456\",\r\n    \"ACTION\": \"user.update\",\r\n    \"Content-Type\": \"application/json\",\r\n    \"Accept\": \"*/*\"\r\n  }\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/destinations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"destinations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Destination",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accountId\": \"2837a617-60a7-4c16-98cc-7fcd9a95c6a8\",\r\n  \"url\": \"https://jsonplaceholder.typicode.com/posts/2\",\r\n  \"httpMethod\": \"put\",\r\n  \"headers\": {\r\n    \"APP_ID\": \"1234APPID1234\",\r\n    \"APP_SECRET\": \"enwdj3bshwer43bjhjs9ereuinkjcnsiurew8s\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/destinations/4d36d607-8b28-4505-9a04-adec35d9d484",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"destinations",
+								"4d36d607-8b28-4505-9a04-adec35d9d484"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Destination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/destinations/4d36d607-8b28-4505-9a04-adec35d9d484",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"destinations",
+								"4d36d607-8b28-4505-9a04-adec35d9d484"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Destination By Account Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/destinations/get-all/2837a617-60a7-4c16-98cc-7fcd9a95c6a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"destinations",
+								"get-all",
+								"2837a617-60a7-4c16-98cc-7fcd9a95c6a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Destination",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/destinations/51c29fcc-621d-4ab5-a252-13290f012dd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"destinations",
+								"51c29fcc-621d-4ab5-a252-13290f012dd3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Handler",
+			"item": [
+				{
+					"name": "Data Handler",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "CL-X-TOKEN",
+								"value": "531c3f2effbadc611a4e69f584a395259875d3350312a7ce2b4c42e58052b50e",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"id\": 5,\r\n    \"title\": \"nesciunt quas odio\",\r\n    \"body\": \"repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/server/incoming_data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"server",
+								"incoming_data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
